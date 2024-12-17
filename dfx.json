@@ -1,0 +1,28 @@
+{
+  "canisters": {
+    "jfirst_backend": {
+      "main": "src/jfirst_backend/main.mo",
+      "type": "motoko"
+    },
+    "jfirst_frontend": {
+      "dependencies": ["jfirst_backend"],
+      "source": ["src/jfirst_frontend/dist"],
+      "type": "assets",
+      "workspace": "jfirst_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "networks": {
+    "ic": {
+      "providers": ["https://ic0.app"],
+      "type": "persistent"
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
